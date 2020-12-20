@@ -1,0 +1,10 @@
+/*Desktop Version*/
+
+@media (min-width: 992px) { 
+   .nav-link:hover{
+       background-color: #006FFF;
+       border-radius: 5px;
+       transition: all .5s ease-in-out;
+   }
+ }
+

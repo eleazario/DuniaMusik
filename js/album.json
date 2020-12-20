@@ -1,0 +1,30 @@
+{
+  "album": [
+    {
+      "song_title": "Changes",
+      "artist" : "Justin Bieber",
+      "image" : "img/30.jpg"
+    },
+    {
+      "song_title":"DNA",
+      "artist":"BTS",
+      "image":"img/29.jpg"
+    },
+    {
+      "song_title" : "Lebih Dari Egoku",
+      "artist" : "Mawar De Jongh",
+      "image" : "img/31.jpg"
+    },
+    {
+      "song_title" : "I Love Yout 3000",
+      "artist" : "Stephanie Poetri",
+      "image" : "img/34.jpg"
+    },
+    {
+      "song_title" : "Hanya Rindu",
+      "artist" : "Andmesh",
+      "image" : "img/35.jpg"
+    }
+    
+  ]
+}

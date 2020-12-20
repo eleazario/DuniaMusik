@@ -1,0 +1,64 @@
+.logo-1{
+    color:#00BFFF;
+}
+.logo-2{
+    color: white;
+}
+
+.contact{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.bold{
+    color: black;
+}
+
+.garis{
+    width: 150px;
+    border-top: 4px solid	black;
+    margin-top: 10px;
+}
+
+
+/*Font*/
+.size{
+    font-size: 20px;
+}
+
+.font-1{
+    font-size: 25px;
+}
+
+.font-2{
+    font-size: 25px;
+}
+
+.font-3{
+    font-size: 25px;
+}
+
+/*Form*/
+.form-name{
+    width: 330px; 
+    background-color: #ebebeb;
+}
+.form-email{
+    width: 330px; 
+    background-color: #ebebeb;
+}
+.form-subject{
+    width: 710px; 
+    background-color: #ebebeb;
+}
+
+.form-message{
+    width: 710px; 
+    background-color: #ebebeb;
+}
+
+
+/*Icon*/
+.circle{
+    font-size: 15px;
+}

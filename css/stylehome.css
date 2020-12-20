@@ -1,0 +1,49 @@
+/*jumbotron*/
+
+.jumbotron{
+    height: 770px;
+    background-image: url('../img/1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/*Sign up and Log In*/
+
+.container-fluid{
+    word-spacing: 1em;
+    text-align: right;
+    text-decoration: none;
+}
+
+/*Navbar brand*/
+
+.logo-1{
+    color:#00BFFF;
+}
+.logo-2{
+    color: white;
+}
+
+div .margin-top{
+    margin-top: 160px;
+}
+
+/*Judul*/
+.title-h1{
+    font-size: 100px;
+    text-align: center;
+}
+
+.title-p{
+    font-size: 25px;
+    text-align: center;
+}
+
+/*Top Menu*/
+.image-1{
+    width: 155px;
+}
+.image-2{
+    width: 155px;
+}

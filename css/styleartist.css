@@ -1,0 +1,70 @@
+/*Background CSS*/
+body {
+    background-image: url('../img/21.jpg');
+    background-size: cover;
+}
+
+.artist{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.garis{
+    width: 150px;
+    border-top: 4px solid 	white;
+    margin-top: 10px;
+}
+
+.logo-1{
+    color:#00BFFF;
+}
+.logo-2{
+    color: white;
+}
+
+.button-1{
+    width: 350px;
+    height: 220px;
+    background-image: url('../img/22.jpg');
+    background-size: cover;
+}
+
+.button-2{
+    width: 350px;
+    height: 220px;
+    background-image: url('../img/23.jpg');
+    background-size: cover;
+}
+
+.button-3{
+    width: 350px;
+    height: 220px;
+    background-image: url('../img/24.jpg');
+    background-size: cover;
+}
+
+.button-4{
+    width: 350px;
+    height: 220px;
+    background-image: url('../img/25.jpg');
+    background-size: cover;
+}
+
+.button-5{
+    width: 350px;
+    height: 220px;
+    background-image: url('../img/26.jpg');
+    background-size: cover;
+}
+
+.button-6{
+    width: 350px;
+    height: 220px;
+    background-image: url('../img/28.jpg');
+    background-size: cover;
+}
+
+.font{
+    font-size: 30px;
+    margin-top: 120px;
+}

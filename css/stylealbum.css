@@ -1,0 +1,86 @@
+/*Background CSS*/
+body{
+    background-color: #323232;
+}
+
+.logo-1{
+    color:#00BFFF;
+}
+.logo-2{
+    color: white;
+}
+
+.album{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.garis{
+    width: 80px;
+    border-top: 4px solid 	white;
+    margin-top: 10px;
+}
+
+.button-1{
+    width: 150px; 
+    height: 150px;
+    background-image: url('../img/29.jpg');
+    background-size: cover;
+}
+
+.button-2{
+    width: 150px; 
+    height: 150px;
+    background-image: url('../img/30.jpg');
+    background-size: cover;
+}
+
+.button-3{
+    width: 150px; 
+    height: 150px;
+    background-image: url('../img/31.jpg');
+    background-size: cover;
+}
+
+.button-4{
+    width: 150px; 
+    height: 150px;
+    background-image: url('../img/32.jpg');
+    background-size: cover;
+}
+
+.button-5{
+    width: 150px; 
+    height: 150px;
+    background-image: url('../img/33.jpg');
+    background-size: cover;
+}
+
+.button-6{
+    width: 150px; 
+    height: 150px;
+    background-image: url('../img/34.jpg');
+    background-size: cover;
+}
+
+.button-7{
+    width: 150px; 
+    height: 150px;
+    background-image: url('../img/35.jpg');
+    background-size: cover;
+}
+
+.button-8{
+    width: 150px; 
+    height: 150px;
+    background-image: url('../img/36.png');
+    background-size: cover;
+}
+
+.font{
+    margin-top: 10px;
+}
+
+.normal{
+    color: #acacac;
+}

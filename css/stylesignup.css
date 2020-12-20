@@ -1,0 +1,55 @@
+/*Background CSS*/
+body{
+    background-color: #323232;
+  }
+
+.logo-1{
+    color: white;
+    font-size: 40px; 
+    margin-top: 30px; 
+    text-align: center;
+}
+
+.logo-2{
+    color:#00BFFF;
+}
+
+.font{
+    font-size: 25px;
+    text-align: center; 
+    margin-top: -20px; 
+    color: #C0C0C0 ;
+}
+
+.button-1{
+    margin-top: 70px; 
+    font-size: 30px; 
+    width: 550px;
+}
+
+.button-2{
+    margin-top: 40px; 
+    font-size: 30px; 
+    width: 550px;
+}
+
+.garis-1{
+    width: 550px; 
+    border-top: 1px solid 	#C0C0C0; 
+    margin-top: 40px;
+}
+
+.garis-2{
+    width: 550px; 
+    border-top: 1px solid 	#C0C0C0; 
+    margin-top: 40px;
+}
+
+.text{
+    font-size: 25px;
+}
+
+.input{
+    width: 550px; 
+    font-size: 30px;
+}

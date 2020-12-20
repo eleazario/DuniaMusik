@@ -1,0 +1,71 @@
+/*Navbar brand*/
+
+.logo-1{
+    color:#00BFFF;
+}
+.logo-2{
+    color: white;
+}
+
+/*Background CSS*/
+body {
+    background-image: url('../img/11.jpg');
+    background-size: cover;
+}
+
+.rounded{
+    margin-top: 100px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border-style: solid;
+    border-width: 20px;
+    border-color: #363636;
+    background-color: #555555;
+}
+
+.user{
+    font-size: 100px;
+    line-height: 1.5;
+    color: #707070;
+}
+
+.h-1{
+    margin-top: 130px;
+}
+
+.text-p{
+    font-size: 20px;
+}
+
+.center{
+    margin-top: 100px;
+}
+
+.btn{
+    width: 550px;
+    opacity: 0.8;
+}
+
+.heart{
+    color: #FF1493;
+    font-size: 100px;
+}
+
+.clock{
+    color: #00BFFF;
+    font-size: 100px;
+}
+
+.margin{
+    margin-top: -82px;
+}
+
+.font{
+    font-size: 30px;
+}
+
+.lagu{
+    color: #bfbfbf;
+    margin-top: -20px;
+}

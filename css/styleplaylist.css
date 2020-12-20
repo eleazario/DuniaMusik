@@ -1,0 +1,80 @@
+/*Background CSS*/
+body {
+    background-image: url('../img/13.jpg');
+    background-size: cover;
+}
+
+.playlist{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.logo-1{
+    color:#00BFFF;
+}
+.logo-2{
+    color: white;
+}
+
+.garis{
+    width: 150px;
+    border-top: 4px solid 	white;
+    margin-top: 10px;
+}
+
+.button-1{
+    width: 150px; 
+    height: 150px;
+    background-image: url('../img/15.jpg');
+    background-size: cover;
+}
+
+.button-2{
+    width: 150px; 
+    height: 150px;
+    background-image: url('../img/16.jpg');
+    background-size: cover;
+}
+
+.button-3{
+    width: 150px; 
+    height: 150px;
+    background-image: url('../img/17.jpg');
+    background-size: cover;
+}
+
+.button-4{
+    width: 150px; 
+    height: 150px;
+    background-image: url('../img/18.jpg');
+    background-size: cover;
+}
+
+.button-5{
+    width: 150px; 
+    height: 150px;
+    background-image: url('../img/19.jpg');
+    background-size: cover;
+}
+
+.button-5 p{
+    margin: -65px;
+}
+
+.button-6{
+    width: 150px; 
+    height: 150px;
+    background-image: url('../img/20.jpg');
+    background-size: cover;
+}
+
+.table{
+    opacity: 0.8;
+    background-color: #252525;
+    height: 100px;
+}
+
+.font{
+    text-align: center;
+    font-size: 30px;
+}
