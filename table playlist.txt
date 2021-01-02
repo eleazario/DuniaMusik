@@ -1,0 +1,1 @@
+INSERT INTO `playlist`(`ID_PLAYLIST`, `NAMA_PLAYLIST`) VALUES ('PL0001','Should I'),('PL0002','Before You Go'),('PL0003','Selaras'),('PL0004','Tak Sanggup Melupa'),('PL0005','Mengapa Kita'),('PL0006','Maafkan Aku'),('PL0007','Isi Hati'),('PL0008','KisahKu'),('PL0009','Terlambat Sudah'),('PL0010','Sudahkah?')
