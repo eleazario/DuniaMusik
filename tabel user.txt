@@ -1,0 +1,1 @@
+INSERT INTO `dmuser`(`ID_USER`, `EMAIL`, `PASSW`) VALUES ('U0001','user@gmail.com','user')
