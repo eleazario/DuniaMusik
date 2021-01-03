@@ -15,24 +15,24 @@
         <button type="button" class="btn btn-primary rounded-pill font-weight-bold button-1"><i class="fab fa-facebook text-light"></i> Login dengan facebook</button> 
         <hr class="garis-1">
         <p class="text-light font-weight-bold text">Login dengan email</p>
-        <form class="needs-validation" novalidate>  
+        <form action="" method="POST" class="needs-validation" novalidate>  
             <div>
-                <input required class="form-control mx-auto input" id="myemail" type="email" placeholder="Alamat email">
+                <input required class="form-control mx-auto input" name="email" id="myemail" type="email" placeholder="Alamat email">
                 <div class="invalid-feedback">
                     Silahkan masukkan email.
                   </div>
             </div>
             <br>
             <div>
-                <input required class="form-control mx-auto input" id="mypassword" type="password" placeholder="Masukkan password">
+                <input required class="form-control mx-auto input" name="password" id="mypassword" type="password" placeholder="Masukkan password">
                 <div class="invalid-feedback">
                     Silahkan masukkan password.
                   </div>
             </div>
-            <button class="btn btn-primary rounded-pill button-2" type="submit">Masuk</button>
+            <button name="login" class="btn btn-primary rounded-pill button-2" type="submit">Masuk</button>
         </form>
         <hr class="garis-2">
-        <p class="text-light">Pengguna Baru? <a href="Sign Up.html"><u>Sign Up</u></a></p>
+        <p class="text-light">Pengguna Baru? <a href="Sign Up.php"><u>Sign Up</u></a></p>
     </div>
     
     <!-- Java Script -->
@@ -73,3 +73,34 @@
     </script>
 </body>
 </html>
+
+<?php
+    include_once('connect_db.php');
+
+    if(isset($_POST['login'])){
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+
+        $sql = "SELECT * FROM dmuser WHERE email=:email";
+        $stmt = $db->prepare($sql);
+
+        $params = array(
+            ":email" => $email
+        );
+
+        $stmt->execute($params);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if($user){
+            if(password_verify($password, $user['PASSW'])){
+                session_start();
+                $_SESSION['user'] = $user;
+                header('Location: My Music.php');
+            }
+        }
+        else{
+          echo '<script>alert("Email atau password salah!")</script>';
+        }
+    }
+
+?>

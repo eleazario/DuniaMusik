@@ -1,3 +1,5 @@
+<?php require('auth.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +18,8 @@
                 <i class="fas fa-user user"></i>
             </div>
             <div class="col-md-6">
-                <h1 class="text-light h-1">Your Name</h1>
-                <p class="text-light text-p">USER</p>
+                <h1 class="text-light h-1"><?php echo $_SESSION['user']['EMAIL']?></h1>
+                <p class="text-light text-p">USER</p><a href="logout.php" style="color: crimson">Logout</a>
             </div>
         </div>
         <div class="text-center center">

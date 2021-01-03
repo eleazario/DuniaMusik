@@ -16,24 +16,24 @@
         <button type="button" class="btn btn-primary rounded-pill font-weight-bold button-1"><i class="fab fa-facebook text-light"></i> Daftar dengan facebook</button> 
         <hr class="garis-1">
         <p class="text-light font-weight-bold text">Daftar dengan email</p>
-        <form class="needs-validation" novalidate>  
+        <form class="needs-validation" novalidate action="" method="POST">  
             <div>
-                <input required class="form-control mx-auto input" id="myemail" type="email" placeholder="Alamat email">
+                <input required class="form-control mx-auto input" name="email" id="email" type="email" placeholder="Alamat email">
                 <div class="invalid-feedback">
                     Silahkan masukkan email.
                   </div>
             </div>
             <br>
             <div>
-                <input required class="form-control mx-auto input" id="mypassword" type="password" placeholder="Masukkan password">
+                <input required class="form-control mx-auto input" name="password" id="password" type="password" placeholder="Masukkan password">
                 <div class="invalid-feedback">
                     Silahkan masukkan password.
                   </div>
             </div>
-            <button class="btn btn-primary rounded-pill button-2" type="submit">Daftar</button>
+            <button name="register" class="btn btn-primary rounded-pill button-2" type="submit">Daftar</button>
         </form>
         <hr class="garis-2">
-        <p class="text-light">Sudah memiliki akun? <a href="Log In.html"><u>Masuk</u></a></p>
+        <p class="text-light">Sudah memiliki akun? <a href="Log In.php"><u>Masuk</u></a></p>
     </div>
     
     <!-- Java Script -->
@@ -57,3 +57,25 @@
 
 </body>
 </html>
+
+<?php
+    include_once('connect_db.php');
+
+    if(isset($_POST['register'])){
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+        $sql = "INSERT INTO dmuser (EMAIL, PASSW) VALUES(:email, :password)";
+        $stmt = $db->prepare($sql);
+
+        $params = array(
+            ':email'=>$email,
+            ':password'=>$password
+        );
+
+        $saved = $stmt->execute($params);
+        if($saved){
+            header("Location: Log In.php");
+        };
+    }    
+?>

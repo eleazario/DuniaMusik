@@ -13,8 +13,17 @@
       <!-- Home -->
           <div class="jumbotron jumbotron-fluid"><br>
             <div class="container-fluid">
-                <a href="Log In.php" class="text-light"><button type="button" class="btn btn-outline-light rounded-pill">Log In</button></a>
-                <a href="Sign Up.php" class="text-light"><button type="button" class="btn btn-outline-light rounded-pill">Sign Up</button></a>
+                <?php
+                  session_start();
+                  if(isset($_SESSION['user'])){
+                    echo '<a href="My Music.php" class="text-light"><button type="button" class="btn btn-outline-light rounded-pill">'.$_SESSION["user"]["EMAIL"].'</button></a>';
+                  }
+                  else{
+                    echo '<a href="Log In.php" class="text-light"><button type="button" class="btn btn-outline-light rounded-pill">Log In</button></a>';
+                    echo '<a href="Sign Up.php" class="text-light"><button type="button" class="btn btn-outline-light rounded-pill">Sign Up</button></a>';                    
+                  }
+                ?>
+                
             </div>
             <div class="margin-top">
                 <h1 class="font-weight-bold text-light title-h1">DUNIA MUSIK</h1>
