@@ -7,26 +7,28 @@
     <title>Dunia Musik</title>
 </head>
 <body>
-    <!-- CSS Background -->
-    <style>
-        body{
-          background-color: #323232;
-        }
-      </style>
     <!-- Nav -->
     <?php include_once 'nav.html'?>
 
-      Album
-      <div class="album">
+    <div class="album container-fluid">
         <h1 class="font-weight-bold text-light">ALBUM</h1>
         <hr class="garis">
-      </div>
-      <br>
-      <div class="row" id="Daftar-Album">
 
-      </div>
+        <div class="row justify-content-center">
+            <?php 
+                include_once('connect_db.php');
 
-      <?php include_once 'script.html'?>
-        <script src="js/album.js"></script>
+                $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $sql = "SELECT * from artist inner join album on artist.ID_ARTIST = album.ID_ARTIST";
+                $stmt = $db->prepare($sql);
+                $stmt->execute();    
+                while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+                    echo '<div class="col-3"><h4 class="text-white">'.$row['NAMA_ALBUM'].'</h4><P class="text-white">'.$row['NAMA_ARTIST'].'</P></div>';
+                }
+            ?>
+        </div>        
+    </div>
+
+    <?php include_once 'script.html'?>
 </body>
 </html>
