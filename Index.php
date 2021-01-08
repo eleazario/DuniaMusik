@@ -33,27 +33,34 @@
           <div class="container">
             <h2 class="font-weight-bold">TOP HITS</h2><br>
               <div class="row">
-                <?php
-                  include_once 'connect_db.php';
-
-                  $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                  $sql = "SELECT * FROM lagu INNER JOIN artist ON lagu.ID_ARTIST = artist.ID_ARTIST WHERE tag = 'hits'";
-                  $stmt = $db->prepare($sql);
-                  $stmt->execute();
-
-                  while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-                    echo'
-                    <div class="col-md-2 image">
+                  <div class="col-md-2 image">
                     <img class="image-2" src="img/2.jpg">
-                    <p class="font-weight-bold">'.$row['JUDUL'].'
+                    <p class="font-weight-bold">Kenangan Manis
                         <br>
-                        <span class="font-weight-normal">'.$row['NAMA_ARTIST'].'</span>
+                        <span class="font-weight-normal">Pamungkas</span>
                     </p>
-                  </div>';
-                  }
-                ?>
-                  
-                  
+                  </div>
+                  <div class="col-md-2 image">
+                    <img class="image-2" src="img/3.jpg">
+                    <p class="font-weight-bold">Pura Pura Lupa
+                        <br>
+                        <span class="font-weight-normal">Mahen</span>
+                    </p>
+                  </div>
+                  <div class="col-md-2 image">
+                    <img class="image-2" src="img/4.jpg">
+                    <p class="font-weight-bold">Bentuk Cinta
+                        <br>
+                        <span class="font-weight-normal">Eclat Story</span>
+                    </p>
+                  </div>
+                  <div class="col-md-2 image">
+                    <img class="image-2" src="img/5.png">
+                    <p class="font-weight-bold">Love Scenario
+                        <br>
+                        <span class="font-weight-normal">iKON</span>
+                    </p>
+                  </div>
               </div>
           </div>
           <br>
@@ -61,25 +68,34 @@
             <div class="container"><br>
                 <h2 class="font-weight-bold text-light">TOP TRENDING</h2><br>
                 <div class="row">
-
-                  <?php
-                    $sql = "SELECT * FROM lagu INNER JOIN artist ON lagu.ID_ARTIST = artist.ID_ARTIST WHERE tag = 'trending'";
-                    $stmt = $db->prepare($sql);
-                    $stmt->execute();
-
-                    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-                      echo'
-                      <div class="col-md-2">
+                    <div class="col-md-2">
                         <img class="image-2" src="img/7.jpg">
-                        <p class="font-weight-bold text-light">'.$row['JUDUL'].'
+                        <p class="font-weight-bold text-light">Sunday Best
                             <br>
-                            <span class="font-weight-normal text-light">'.$row['NAMA_ARTIST'].'</span>
+                            <span class="font-weight-normal text-light">Surfaces</span>
                         </p>
-                     </div>';
-                    }
-                  ?>
-                    
-                    
+                     </div>
+                     <div class="col-md-2">
+                        <img class="image-2" src="img/8.png">
+                        <p class="font-weight-bold text-light">Yummy
+                            <br>
+                            <span class="font-weight-normal text-light">Justin Bieber</span>
+                        </p>
+                     </div>
+                     <div class="col-md-2">
+                        <img class="image-2" src="img/9.jpeg">
+                        <p class="font-weight-bold text-light">Boy With Luv
+                            <br>
+                            <span class="font-weight-normal text-light">BTS, Halsey</span>
+                        </p>
+                     </div>
+                     <div class="col-md-2">
+                        <img class="image-2" src="img/10.jpg">
+                        <p class="font-weight-bold text-light">Sedang Sayang Sayangnya
+                            <br>
+                            <span class="font-weight-normal text-light">Mawar De Jongh</span>
+                        </p>
+                     </div>
               </div>
             </div>
           </div>
