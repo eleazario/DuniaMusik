@@ -37,14 +37,14 @@
                   include_once 'connect_db.php';
 
                   $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                  $sql = "SELECT * FROM lagu INNER JOIN artist ON lagu.ID_ARTIST = artist.ID_ARTIST WHERE tag = 'hits'";
+                  $sql = "SELECT * FROM artist JOIN lagu ON artist.ID_ARTIST = lagu.ID_ARTIST JOIN album ON lagu.ID_ALBUM = album.ID_ALBUM WHERE tag = 'hits'";
                   $stmt = $db->prepare($sql);
                   $stmt->execute();
 
                   while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                     echo'
                     <div class="col-md-2 image">
-                    <img class="image-2" src="img/2.jpg">
+                    <img class="image-2" src="data:image/jpeg;base64,'.base64_encode($row['COVER_ALBUM']).'">
                     <p class="font-weight-bold">'.$row['JUDUL'].'
                         <br>
                         <span class="font-weight-normal">'.$row['NAMA_ARTIST'].'</span>
@@ -63,14 +63,14 @@
                 <div class="row">
 
                   <?php
-                    $sql = "SELECT * FROM lagu INNER JOIN artist ON lagu.ID_ARTIST = artist.ID_ARTIST WHERE tag = 'trending'";
+                    $sql = "SELECT * FROM artist JOIN lagu ON artist.ID_ARTIST = lagu.ID_ARTIST JOIN album ON lagu.ID_ALBUM = album.ID_ALBUM WHERE tag = 'trending'";
                     $stmt = $db->prepare($sql);
                     $stmt->execute();
 
                     while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                       echo'
                       <div class="col-md-2">
-                        <img class="image-2" src="img/7.jpg">
+                        <img class="image-2" src="data:image/jpeg;base64,'.base64_decode($row['COVER_ALBUM']).'">
                         <p class="font-weight-bold text-light">'.$row['JUDUL'].'
                             <br>
                             <span class="font-weight-normal text-light">'.$row['NAMA_ARTIST'].'</span>
