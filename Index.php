@@ -70,7 +70,7 @@
                     while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                       echo'
                       <div class="col-md-2">
-                        <img class="image-2" src="data:image/jpeg;base64,'.base64_decode($row['COVER_ALBUM']).'">
+                        <img class="image-2" src="data:image/jpeg;base64,'.base64_encode($row['COVER_ALBUM']).'">
                         <p class="font-weight-bold text-light">'.$row['JUDUL'].'
                             <br>
                             <span class="font-weight-normal text-light">'.$row['NAMA_ARTIST'].'</span>
