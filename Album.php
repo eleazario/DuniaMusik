@@ -23,7 +23,7 @@
                 $stmt = $db->prepare($sql);
                 $stmt->execute();    
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-                    echo '<div class="col-3"><img height="155px" class="image-2" src="'.$row['COVER_ALBUM'].'"><h4 class="text-white">'.$row['NAMA_ALBUM'].'</h4><P class="text-white">'.$row['NAMA_ARTIST'].'</P></div>';
+                    echo '<div class="col-3"><img height="155px" class="image-2" src="data:image/jpeg;base64,'.base64_encode($row['COVER_ALBUM']).'"><h4 class="text-white">'.$row['NAMA_ALBUM'].'</h4><P class="text-white">'.$row['NAMA_ARTIST'].'</P></div>';
                 }
             ?>
         </div>        
