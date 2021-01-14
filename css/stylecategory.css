@@ -1,7 +1,7 @@
 /*Background CSS*/
 
 body {
-    background-image: url('../img/12.jpg');
+    background-image: url('../img/bckg.jpg');
     background-size: cover;
 }
 
@@ -31,4 +31,23 @@ body {
 .font{
     width: 300px;
     text-align: center;
+}
+
+.search{
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 750px;
+    width: 80%;
+    background-color: silver;
+    opacity: 70%;
+    position: center;
+}
+
+.template{
+    margin: 5%;
+    background-color: slategray;
+    opacity: 98%;
+    width: 90%;
+    height: 90%;
 }
