@@ -3,7 +3,7 @@
 <head>
     <?php include_once 'head.html'?>
     <link rel="stylesheet" href="css/stylehome.css">    
-
+    <link rel="stylesheet" href="css/stylecategory.css">
     <title>Dunia Musik</title>
 </head>
 <body>
@@ -11,8 +11,15 @@
     <?php include_once 'nav.html'?>
 
       <!-- Home -->
-          <div class="jumbotron jumbotron-fluid"><br>
-            <div class="container-fluid">
+      <div id="Content">
+      <div class="jumbotron jumbotron-fluid"><br>
+            <div class="nav justify-content-end px-4">
+              <form action="" class="nav-item mx-3" id="FormSearch">
+                <input placeholder="Search" style="background-color: transparent; color:#ffffff; padding-left: 10px;" class="rounded-pill" type="search" id="search">
+                <button type="submit" class="btn btn-outline-light rounded-circle"><i class="fas fa-search"></i></button>
+              </form>
+                
+              <div class="container-fluid">
                 <?php
                   session_start();
                   if(isset($_SESSION['user'])){
@@ -33,7 +40,8 @@
           <div class="container">
             <h2 class="font-weight-bold">TOP HITS</h2><br>
               <div class="row">
-                <?php
+                
+              <?php
                   include_once 'connect_db.php';
 
                   $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -53,7 +61,6 @@
                   }
                 ?>
                   
-                  
               </div>
           </div>
           <br>
@@ -62,7 +69,7 @@
                 <h2 class="font-weight-bold text-light">TOP TRENDING</h2><br>
                 <div class="row">
 
-                  <?php
+                <?php
                     $sql = "SELECT * FROM artist JOIN lagu ON artist.ID_ARTIST = lagu.ID_ARTIST JOIN album ON lagu.ID_ALBUM = album.ID_ALBUM WHERE tag = 'trending'";
                     $stmt = $db->prepare($sql);
                     $stmt->execute();
@@ -79,12 +86,13 @@
                     }
                   ?>
                     
-                    
               </div>
             </div>
           </div>
+      </div>
+         
           
           <?php include_once 'script.html'?>
-  </body>
+        </body>
 </body>
 </html>

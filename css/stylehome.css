@@ -48,3 +48,7 @@ div .margin-top{
     width: 155px;
     height: 155px;
 }
+
+#FormSearch{
+    width: fit-content;
+}
